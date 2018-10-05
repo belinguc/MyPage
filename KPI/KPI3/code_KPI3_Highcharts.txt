@@ -1,0 +1,93 @@
+Highcharts.chart('container', {
+    title: {
+        text: 'Prediction accuracy of remaining runtime'
+    },
+    subtitle: {
+        text: 'Dotted line typically signifies prognosis'
+    },
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    
+    yAxis: {
+            chart: {
+            type: 'area'
+        },
+        title: {
+            text: 'Battery runtime (minutes)'
+        },
+        plotBands: [{
+          color: "#ffcece", // Color value
+          from: 60, // Start of the plot band
+          to: 85 // End of the plot band
+        }],
+        plotLines:[{
+                value: 85,
+                color: "red",
+                dashStyle: 'longdashdot',
+                width: 2,
+                label: {
+                    text: 'Target'
+                }
+            }]
+    },
+    
+    series: [{
+        name: 'No voice control activation + movies',
+        data: [90, 87, 89, 91, 93],
+        zoneAxis: 'x',
+        color: "#EB984E",
+        zones: [{
+            value: 2
+        }, {
+            dashStyle: 'dot'
+        }]
+    },
+        {
+        name: 'No voice control activation + live streaming videos',
+        data: [87, 89, 91, 93, 95],
+        zoneAxis: 'x',
+        color: "#52BE80",
+        zones: [{
+            value: 2
+        }, {
+            dashStyle: 'dot'
+        }]
+    },
+        {
+        name: 'Voice control activation + music',
+        data: [86, 85, 86, 87, 87],
+        zoneAxis: 'x',
+        color: "#BDC3C7",
+        zones: [{
+            value: 2
+        }, {
+            dashStyle: 'dot'
+        }]
+    },
+        {
+        name: 'Voice control activation + movies',
+        data: [70, 80, 78, 82, 86],
+        zoneAxis: 'x',
+        color: '#3498DB',
+        zones: [{
+            value: 2
+        }, {
+            dashStyle: 'dot'
+        }]
+    },
+    {
+        name: 'Significant steady usage of voice control',
+        data: [65, 75, 73, 78, 80],
+        zoneAxis: 'x',
+        color: '#A569BD',
+        zones: [{
+            value: 2
+        }, {
+            dashStyle: 'dot'
+        }]
+    }]
+});
+
+
+
