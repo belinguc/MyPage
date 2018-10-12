@@ -1,3 +1,15 @@
+
+
+#div_horloge {
+	color:#d5e8f2;
+	font-family:font-3dsbold;
+	font-weight: bold;
+	font-size: 50px;
+   position: absolute;
+   top: 185px;
+   left: 20px;
+}
+
 .list {
   font-family:sans-serif;
 }
