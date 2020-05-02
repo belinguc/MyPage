@@ -1,2 +1,1 @@
-## [Welcome to my GitHub Page](https://belinguc.github.io/)
-
+## [Welcome to my GitHub Page](https://christopherbelinguier.github.io)
